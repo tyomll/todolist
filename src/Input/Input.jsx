@@ -7,7 +7,6 @@ const Input = () => {
         setInputValue(event.target.value)
     };
     const handleValueAdd = () => {
-        debugger
         const updatedList = [...list]
         updatedList.push(inputValue)
         setList(updatedList)

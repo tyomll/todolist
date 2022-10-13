@@ -1,4 +1,7 @@
 import { useState } from "react";
+import "./Input.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const Input = () => {
     const [inputValue, setInputValue] = useState("");
@@ -9,10 +12,10 @@ const Input = () => {
     const handleValueAdd = () => {
         const updatedList = [...list]
         updatedList.push(inputValue)
-        setList(updatedList)
-        setInputValue("")
-        
-        
+        if(inputValue !== ""){
+            setList(updatedList)
+        }
+        setInputValue("")  
     }
     const deleteDiv = (i) => {
         let listCopy = [...list];
@@ -20,12 +23,16 @@ const Input = () => {
         setList(listCopy)
     }
     return (
-        <div>
-        <input type="text" value = {inputValue}onChange={handleInputChange}></input>
-        <button onClick={handleValueAdd}>Add</button>
-        {list.map((item, index) => {
-            return <div key = {index}>{item}<button onClick={() => deleteDiv(index)}>Delete</button></div> 
-        })}
+        <div className="container">
+            <div>
+                <h1>Enter Task</h1>
+                <input type="text" value = {inputValue}onChange={handleInputChange} placeholder="Add new..."></input>
+                <button className="add" onClick={handleValueAdd}>Add</button>
+                <hr />
+                {list.map((item, index) => {
+                    return <div key = {index} className="taskDiv">{item}<button onClick={() => deleteDiv(index)}><FontAwesomeIcon class="delete-icon"icon={faTrash} /></button></div>  
+                })}
+            </div>
         </div>
     );
 };

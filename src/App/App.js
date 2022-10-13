@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Input from '../Input/Input';
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <Input/>
     </div>
   );

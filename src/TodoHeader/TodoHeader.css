@@ -1,0 +1,15 @@
+.todo-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 25px;
+    background-color: #e0e0e0;
+    height: 100px;
+  }
+  .todo-heading-text {
+    color: #383737;
+  }
+  .todo-heading-count {
+    color: #696969;
+  }
+ 

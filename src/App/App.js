@@ -12,7 +12,6 @@ const App = () => {
   const [search, setSearch] = useState("")
   return (
     <div className='container'>
-      {console.log(search)}
       <SearchTask
         trigger={buttonPopup}
         setTrigger={setButtonPopup}

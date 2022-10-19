@@ -25,7 +25,6 @@ function SearchTask({ trigger, setTrigger, setSearch }) {
             value={text}
             onChange={(e) => {
               setText(e.target.value)
-              console.log(text)
             }}
           />
           <span onClick={(e) => {

@@ -23,12 +23,15 @@ function SearchTask({ trigger, setTrigger, setSearch }) {
           <input
             type="text"
             value={text}
-            onChange={(e) => {
-              setText(e.target.value)
+            onChange={(e) => {    
+              if(e.target.value !== " "){     
+                setText(e.target.value)     
+              } 
             }}
           />
           <span onClick={(e) => {
             setTrigger(false)
+            
             setSearch(text);
           }}>
             <FontAwesomeIcon icon={faSearch} size="lg" color="white" />

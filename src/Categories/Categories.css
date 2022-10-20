@@ -5,6 +5,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  
 }
 .category h2 {
   padding-left: 20px;
@@ -48,10 +49,11 @@
 .categories li {
   list-style: circle;
   color: white;
+  
 }
 .categories li span {
   color: rgba(255, 255, 255, 0.57);
-
+  font-size: 19px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;

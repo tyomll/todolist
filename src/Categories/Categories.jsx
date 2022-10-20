@@ -40,7 +40,7 @@ function Categories({ categories, onCategoryAdd, setCategory }) {
           value={categoryValue}
           type="text"
           className="category-input"
-          placeholder="new list name"
+          placeholder="New list name"
           onChange={(e) => {
             setCategoryValue(e.target.value);
           }}

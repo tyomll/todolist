@@ -37,7 +37,7 @@ function SearchTask({ trigger, setTrigger, setSearch }) {
             setText("")
             setSearch("");
             setTrigger(false)
-          }}>Clear Search</p>
+          }}>Clear Search Results</p>
         </form>
       </div>
     </div>

@@ -22,7 +22,7 @@ function TodoForm({ onAdd, setButtonPopup }) {
         </button>
         <input
           type="text"
-          placeholder="enter new task"
+          placeholder="Enter New Task"
           className="todo-input"
           value={text}
           onChange={(e) => {

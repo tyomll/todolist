@@ -13,12 +13,11 @@ const App = () => {
   const [search, setSearch] = useState("")
   const [categories, setCategories] = useState([])
   const [category, setCategory] = useState("All Tasks")
-  const [categoryColor, setCategoryColor] = useState("rgba(255, 255, 255, 0.685)")
+  
   return (
     <div className='main'>
       <div className='container'>
         <Categories
-          setCategoryColor={setCategoryColor}
           categories={categories}
           setCategory={setCategory}
           onCategoryAdd={(text) => {
@@ -28,7 +27,6 @@ const App = () => {
                 {
                   id: Math.random(),
                   text: text,
-                  color: categoryColor
                 }
               ])
             }

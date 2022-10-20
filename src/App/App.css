@@ -55,3 +55,18 @@
 .todo-tasks {
   flex: 1;
 }
+
+@media (max-width: 761px){
+  .container {
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 481px){
+  .todo {
+  
+    width: 300px;
+    background-color: #f4f3f4;
+    height: 400px;
+  }
+}

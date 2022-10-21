@@ -11,9 +11,13 @@ const App = () => {
   const [todos, setTodos] = useState([])
   const [buttonPopup, setButtonPopup] = useState(false)
   const [search, setSearch] = useState("")
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([
+    {
+      id: Math.random(),
+      text: "All Tasks",
+    }
+  ])
   const [category, setCategory] = useState("All Tasks")
-  
   return (
     <div className='main'>
       <div className='container'>
@@ -76,7 +80,6 @@ const App = () => {
             </div>
             <TodoForm
               setButtonPopup={setButtonPopup}
-
               onAdd={(text) => {
                 if (text !== "") {
                   setTodos([
@@ -92,9 +95,11 @@ const App = () => {
 
               }} />
           </div>
-          <TodoFooter todos={todos} onClearCompleted={() => {
-            setTodos(todos.filter((todo) => !todo.isCompleted))
-          }} />
+          <TodoFooter
+            todos={todos}
+            onClearCompleted={() => {
+              setTodos(todos.filter((todo) => !todo.isCompleted))
+            }} />
         </div>
       </div>
     </div>

@@ -8,44 +8,43 @@ function Categories({ categories, onCategoryAdd, setCategory }) {
     <div className="category">
       <h2>My Lists</h2>
       <div className="categories-body">
-      <div className="categories">
-        {categories.map((categoryItem) => {
-          return (
-            <li key={categoryItem.id}>
-              <span
-                style={{ color: categoryItem.color }}
-                onClick={() => {
-                  setCategory(categoryItem.text);
-                }}
-              >
-                {categoryItem.text}
-              </span>
-            </li>
-          );
-        })}
-      </div>
-      
-      <form
-        className="category-input-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          onCategoryAdd(categoryValue);
-          setCategoryValue("");
-        }}
-      >
-        <button className="category-add">
-          <FontAwesomeIcon icon={faPlus} size="lg" color="white" />
-        </button>
-        <input
-          value={categoryValue}
-          type="text"
-          className="category-input"
-          placeholder="New list name"
-          onChange={(e) => {
-            setCategoryValue(e.target.value);
+        <div className="categories">
+          {categories.map((categoryItem) => {
+            return (
+              <li key={categoryItem.id}>
+                <span
+                  onClick={() => {
+                    setCategory(categoryItem.text);
+                  }}
+                >
+                  {categoryItem.text}
+                </span>
+              </li>
+            );
+          })}
+        </div>
+
+        <form
+          className="category-input-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            onCategoryAdd(categoryValue);
+            setCategoryValue("");
           }}
-        ></input>
-      </form>
+        >
+          <button className="category-add">
+            <FontAwesomeIcon icon={faPlus} size="lg" color="white" />
+          </button>
+          <input
+            value={categoryValue}
+            type="text"
+            className="category-input"
+            placeholder="New list name"
+            onChange={(e) => {
+              setCategoryValue(e.target.value);
+            }}
+          ></input>
+        </form>
       </div>
     </div>
   );

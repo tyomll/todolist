@@ -61,3 +61,6 @@
 .categories li span:hover {
   color: white;
 }
+li:first-child span {
+  color: white;
+}

@@ -17,27 +17,35 @@ function SearchTask({ trigger, setTrigger, setSearch }) {
           className="search-input"
           onSubmit={(e) => {
             e.preventDefault();
-            
           }}
         >
           <input
             type="text"
             value={text}
             onChange={(e) => {
-              setText(e.target.value)
+              if (e.target.value !== " ") {
+                setText(e.target.value);
+              }
             }}
           />
-          <span onClick={(e) => {
-            setTrigger(false)
-            setSearch(text);
-          }}>
+          <span
+            onClick={(e) => {
+              setTrigger(false);
+              setSearch(text);
+            }}
+          >
             <FontAwesomeIcon icon={faSearch} size="lg" color="white" />
           </span>
-          <p className="clear-btn" onClick={() => {
-            setText("")
-            setSearch("");
-            setTrigger(false)
-          }}>Clear Search Results</p>
+          <p
+            className="clear-btn"
+            onClick={() => {
+              setText("");
+              setSearch("");
+              setTrigger(false);
+            }}
+          >
+            Clear Search Results
+          </p>
         </form>
       </div>
     </div>

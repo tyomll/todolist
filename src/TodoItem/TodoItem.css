@@ -1,5 +1,5 @@
 .todo-tasks{
-    padding: 0 40px 0 40px;
+    padding: 0 20px 0 20px;
 }
 .task-div{
     margin-top: 20px;
@@ -12,6 +12,16 @@
 .task-div-title{
     font-size: 25px;
     margin-left: 10px;
+    padding-bottom: 5px;
+}
+.task-div-title-input{
+    font-size: 25px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.674);
+    background-color: inherit;
+    padding-bottom: 5px;
 }
 .task-div-checkbox {
     width: 20px;
@@ -37,5 +47,25 @@
     cursor: pointer;
     right: 20px;
     padding-top: 5px;
+    outline: none;
     
+}
+.task-edit-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 50px;
+    padding-top: 5px;
+    outline: none;
+}
+.task-save-btn{
+    display: none;
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 50px;
+    padding-top: 5px;
+    outline: none;
 }

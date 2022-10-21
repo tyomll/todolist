@@ -1,29 +1,30 @@
 import TodoItem from "../TodoItem/TodoItem";
 
-function TodoList({ todos , onDelete, onChange, search , category}) {
-
+function TodoList({ todos, onDelete, onChange, search, category }) {
   return (
     <div>
-      {
-        todos.filter((todo) => {
-          if(todo.category === category){
-            return todo
+      {todos
+        .filter((todo) => {
+          if (todo.category === category) {
+            return todo;
           }
         })
         .filter((todo) => {
-          return search.toLowerCase() === "" ?
-          todo : todo.text.toLowerCase().includes(search)
+          return search.toLowerCase() === ""
+            ? todo
+            : todo.text.toLowerCase().includes(search);
         })
         .map((todo) => {
-        return (
+          return (
             <TodoItem
-            key = {todo.id} 
-            todo={todo}
-            onChange={onChange}
-            onDelete={onDelete}
+              category={category}
+              key={todo.id}
+              todo={todo}
+              onChange={onChange}
+              onDelete={onDelete}
             />
-        )
-      })}
+          );
+        })}
     </div>
   );
 }

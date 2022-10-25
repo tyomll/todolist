@@ -1,0 +1,10 @@
+.todo-management {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.todo-management p {
+  color: #e8e8e890;
+  cursor: pointer;
+}

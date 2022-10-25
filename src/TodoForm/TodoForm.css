@@ -1,0 +1,38 @@
+.todo-input-form {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+.todo-input {
+  background-color: inherit;
+  border: none;
+  margin: 20px 0px 30px 10px;
+  width: 350px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.674);
+  padding-bottom: 4px;
+  font-size: 20px;
+  outline: none;
+  align-items: center;
+  
+}
+.todo-add {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.todo-search {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 7px;
+}
+@media (max-width: 481px){
+  .todo-input {
+  
+    width: 200px;
+   
+    
+  }
+}

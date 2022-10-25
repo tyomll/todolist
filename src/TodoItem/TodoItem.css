@@ -1,0 +1,71 @@
+.todo-tasks{
+    padding: 0 20px 0 20px;
+}
+.task-div{
+    margin-top: 20px;
+    position: relative;
+    align-items: center;
+}
+.task-div hr{
+    margin-top: 10px;
+}
+.task-div-title{
+    font-size: 25px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+.task-div-title-input{
+    font-size: 25px;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.674);
+    background-color: inherit;
+    padding-bottom: 5px;
+}
+.task-div-checkbox {
+    width: 20px;
+    height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.task-div-checkbox:checked {
+  background-color: #306fcd;
+  border-color: #306fcd;
+  box-shadow: inset 0 0 0px 5px white;
+}
+.task-delete-btn{
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 20px;
+    padding-top: 5px;
+    outline: none;
+    
+}
+.task-edit-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 50px;
+    padding-top: 5px;
+    outline: none;
+}
+.task-save-btn{
+    display: none;
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    right: 50px;
+    padding-top: 5px;
+    outline: none;
+}

@@ -4,11 +4,7 @@ import { faTrash, faPen, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import swal from "sweetalert";
 
-<<<<<<< HEAD
 const TodoItem = ({ todo, onChange, onDelete, setCheckedCount, checkedCount }) => {
-=======
-const TodoItem = ({ todo, onChange, onDelete }) => {
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
   const [editBtn, setEditBtn] = useState(true);
   const [saveBtn, setSaveBtn] = useState(false);
 
@@ -28,7 +24,6 @@ const TodoItem = ({ todo, onChange, onDelete }) => {
             ...todo,
             isCompleted: e.target.checked,
           });
-<<<<<<< HEAD
           if(e.target.checked === true){
             setCheckedCount(checkedCount+1)
           }
@@ -36,8 +31,6 @@ const TodoItem = ({ todo, onChange, onDelete }) => {
             setCheckedCount(checkedCount-1)
           }
           
-=======
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
         }}
       />
       <span className="task-div-title">{todo.text}</span>
@@ -78,15 +71,12 @@ const TodoItem = ({ todo, onChange, onDelete }) => {
             ...todo,
             isCompleted: e.target.checked,
           });
-<<<<<<< HEAD
           if(e.target.checked === true){
             setCheckedCount(checkedCount+1)
           }
           else{
             setCheckedCount(checkedCount-1)
           }
-=======
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
         }}
       />
       <input

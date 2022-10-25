@@ -1,5 +1,4 @@
 import "./TodoHeader.css";
-<<<<<<< HEAD
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCut, faCopy, faPaste } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -20,11 +19,6 @@ function TodoHeader({
     setPasteButton(true);
   }
   const normalMode = (
-=======
-
-function TodoHeader({ todos, category }) {
-  return (
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
     <div className="todo-heading">
       <h2 className="todo-heading-text">{category}</h2>
       <p className="todo-heading-count">
@@ -32,7 +26,6 @@ function TodoHeader({ todos, category }) {
       </p>
     </div>
   );
-<<<<<<< HEAD
   const editMode = (
     <div className="todo-heading">
       <h2 className="todo-heading-text">{category}</h2>
@@ -139,7 +132,5 @@ function TodoHeader({ todos, category }) {
   } else {
     return normalMode;
   }
-=======
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
 }
 export default TodoHeader;

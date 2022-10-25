@@ -14,10 +14,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "react-uuid": "^1.0.3",
-=======
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },

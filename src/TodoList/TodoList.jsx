@@ -1,4 +1,5 @@
 import TodoItem from "../TodoItem/TodoItem";
+<<<<<<< HEAD
 import uuid from 'react-uuid';
 function TodoList({
   todos,
@@ -10,6 +11,10 @@ function TodoList({
   checkedCount,
   setSelectionTools,
 }) {
+=======
+
+function TodoList({ todos, onDelete, onChange, search, category }) {
+>>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
   return (
     <div>
       {todos
@@ -26,11 +31,16 @@ function TodoList({
         .map((todo) => {
           return (
             <TodoItem
+<<<<<<< HEAD
               setSelectionTools={setSelectionTools}
               checkedCount={checkedCount}
               setCheckedCount={setCheckedCount}
               category={category}
               key={uuid()}
+=======
+              category={category}
+              key={todo.id}
+>>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
               todo={todo}
               onChange={onChange}
               onDelete={onDelete}

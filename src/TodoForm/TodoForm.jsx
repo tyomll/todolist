@@ -33,4 +33,8 @@ function TodoForm({ onAdd, setButtonPopup }) {
     </div>
   );
 }
+<<<<<<< HEAD
 export default TodoForm;
+=======
+export default TodoForm;
+>>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d

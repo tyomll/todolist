@@ -6,35 +6,22 @@ import TodoFooter from '../TodoFooter/TodoFooter';
 import TodoHeader from '../TodoHeader/TodoHeader';
 import SearchTask from '../SearchTask/SearchTask';
 import Categories from '../Categories/Categories';
-<<<<<<< HEAD
 import uuid from 'react-uuid';
 
 const App = () => {
 
   const [todos, setTodos] = useState([])
 
-=======
-
-const App = () => {
-  const [todos, setTodos] = useState([])
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
   const [buttonPopup, setButtonPopup] = useState(false)
   const [search, setSearch] = useState("")
   const [categories, setCategories] = useState([
     {
-<<<<<<< HEAD
       id: uuid(),
-=======
-      id: Math.random(),
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
       text: "All Tasks",
     }
   ])
   const [category, setCategory] = useState("All Tasks")
-<<<<<<< HEAD
   const [checkedCount, setCheckedCount] = useState(0)
-=======
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
   return (
     <div className='main'>
       <div className='container'>
@@ -46,11 +33,7 @@ const App = () => {
               setCategories([
                 ...categories,
                 {
-<<<<<<< HEAD
                   id: uuid(),
-=======
-                  id: Math.random(),
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
                   text: text,
                 }
               ])
@@ -66,11 +49,7 @@ const App = () => {
               setTodos([
                 ...todos,
                 {
-<<<<<<< HEAD
                   id: uuid(),
-=======
-                  id: Math.random(),
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
                   text: text,
                   isCompleted: false
                 }
@@ -80,7 +59,6 @@ const App = () => {
           }}
         />
         <div className="todo">
-<<<<<<< HEAD
           <TodoHeader
             setTodos={setTodos}
             onPaste={(arr) => {
@@ -99,12 +77,6 @@ const App = () => {
               <TodoList
                 checkedCount={checkedCount}
                 setCheckedCount={setCheckedCount}
-=======
-          <TodoHeader todos={todos} category={category} />
-          <div className="todo-body">
-            <div className='todo-tasks'>
-              <TodoList
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
                 category={category}
                 search={search}
                 todos={todos}
@@ -131,11 +103,7 @@ const App = () => {
                   setTodos([
                     ...todos,
                     {
-<<<<<<< HEAD
                       id: uuid(),
-=======
-                      id: Math.random(),
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
                       text: text,
                       isCompleted: false,
                       category: category
@@ -153,13 +121,9 @@ const App = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
   );
 
-=======
-  );
->>>>>>> 3c2dfa29ffe818c70bf2fb4405522c5a1cdf054d
 }
 
 export default App;

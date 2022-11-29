@@ -9,6 +9,15 @@ function Categories({ categories, onCategoryAdd, setCategory }) {
       <h2>My Lists</h2>
       <div className="categories-body">
         <div className="categories">
+          <li>
+            <span
+              onClick={() => {
+                setCategory("All tasks");
+              }}
+            >
+              All tasks
+            </span>
+          </li>
           {categories.map((categoryItem) => {
             return (
               <li key={categoryItem.id}>

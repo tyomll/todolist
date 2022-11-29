@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TodoList from '../TodoList/TodoList';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoFooter from '../TodoFooter/TodoFooter';
@@ -8,20 +8,29 @@ import SearchTask from '../SearchTask/SearchTask';
 import Categories from '../Categories/Categories';
 import uuid from 'react-uuid';
 
+
+const todosFromLocalStorage = JSON.parse(localStorage.getItem("todos") || "[]")
+const categoriesFromLocalStorage = JSON.parse(localStorage.getItem("categories") || {
+  id: uuid(),
+  text: "All Tasks",
+
+})
+
 const App = () => {
-
-  const [todos, setTodos] = useState([])
-
+  const [todos, setTodos] = useState(todosFromLocalStorage)
   const [buttonPopup, setButtonPopup] = useState(false)
   const [search, setSearch] = useState("")
-  const [categories, setCategories] = useState([
-    {
-      id: uuid(),
-      text: "All Tasks",
-    }
-  ])
+  const [categories, setCategories] = useState(categoriesFromLocalStorage)
   const [category, setCategory] = useState("All Tasks")
   const [checkedCount, setCheckedCount] = useState(0)
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
+  useEffect(() => {
+    localStorage.setItem("categories", JSON.stringify(categories))
+  }, [categories])
+
   return (
     <div className='main'>
       <div className='container'>
@@ -66,8 +75,8 @@ const App = () => {
                 todos.concat(arr)
               )
               console.log("pasted Array -", arr)
-              console.log("todos Array -" , todos)
-            }} 
+              console.log("todos Array -", todos)
+            }}
             checkedCount={checkedCount}
             todos={todos}
             category={category}

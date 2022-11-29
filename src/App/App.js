@@ -10,11 +10,11 @@ import uuid from 'react-uuid';
 
 
 const todosFromLocalStorage = JSON.parse(localStorage.getItem("todos") || "[]")
-const categoriesFromLocalStorage = JSON.parse(localStorage.getItem("categories") || {
+const categoriesFromLocalStorage = JSON.parse(localStorage.getItem("categories") || [{
   id: uuid(),
   text: "All Tasks",
 
-})
+}])
 
 const App = () => {
   const [todos, setTodos] = useState(todosFromLocalStorage)
